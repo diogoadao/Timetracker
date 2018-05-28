@@ -1,4 +1,6 @@
 function Login(email, password) {
+    console.log(email);
+    console.log(password);
     jQuery.ajax({
         type: "POST",
         url: '../../assets/php/login.php',
@@ -9,6 +11,7 @@ function Login(email, password) {
         },
 
         success: function (data) {
+            console.log(data);
             if (data != null) {
                 swal({
                     position: 'center',
@@ -43,7 +46,9 @@ function Login(email, password) {
                     timer: 1500
                 })
             }
-        }
+        },
+
+
     });
 }
 
@@ -112,16 +117,17 @@ function checkSession() {
 }
 
 function Lock() {
-    localStorage.removeItem('session_code');
-    localStorage.removeItem('id');
-    localStorage.removeItem('rank');
     location.href = "lock.html";
 }
 
 function LockUpdate() {
+
     if (localStorage.getItem('fname') === null) {
         location.href = 'https://thmc.ddns.net/test/src/html/login.html'
     } else {
+        localStorage.removeItem('session_code');
+        localStorage.removeItem('id');
+        localStorage.removeItem('rank');
         console.log(localStorage.getItem('fname') + " " + localStorage.getItem('lname'));
         var doc = document.getElementById('fullname');
         doc.innerHTML = localStorage.getItem('fname') + " " + localStorage.getItem('lname');
