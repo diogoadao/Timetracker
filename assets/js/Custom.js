@@ -8,7 +8,7 @@ function Login(email, password) {
             password: password
         },
 
-        success: function(data) {
+        success: function (data) {
             if (data != null) {
                 swal({
                     position: 'center',
@@ -17,13 +17,13 @@ function Login(email, password) {
                     showConfirmButton: false,
                     timer: 1500
                 })
-                
-                setTimeout(function() {
+
+                setTimeout(function () {
                     var time = 43200000;
                     ls2.save('session_code', data['access_key'], time);
                     localStorage.setItem('id', data['id']);
-                    localStorage.setItem('fname', data['fname']);
-                    localStorage.setItem('lname', data['lname']);
+                    localStorage.setItem('fname', data['first_name']);
+                    localStorage.setItem('lname', data['last_name']);
                     localStorage.setItem('email', data['email']);
                     localStorage.setItem('rank', data['rank']);
                     if (data['rank'] >= 1) {
@@ -61,8 +61,8 @@ function Logout() {
 
 
 var ls2 = {
-    save: function(key, jsonData, expirationMS) {
-        if (typeof(Storage) == "undefined") {
+    save: function (key, jsonData, expirationMS) {
+        if (typeof (Storage) == "undefined") {
             return false;
         }
         var record = {
@@ -72,8 +72,8 @@ var ls2 = {
         localStorage.setItem(key, JSON.stringify(record));
         return jsonData;
     },
-    load: function(key) {
-        if (typeof(Storage) == "undefined") {
+    load: function (key) {
+        if (typeof (Storage) == "undefined") {
             return false;
         }
         var record = JSON.parse(localStorage.getItem(key));
@@ -109,4 +109,22 @@ function checkSession() {
     if (ls2.load('session_code') == false) {
         location.href = 'https://thmc.ddns.net/test/src/expired.html'
     }
+}
+
+function Lock() {
+    localStorage.removeItem('session_code');
+    localStorage.removeItem('id');
+    localStorage.removeItem('rank');
+    location.href = "lock.html";
+}
+
+function LockUpdate() {
+    if (localStorage.getItem('fname') === null) {
+        location.href = 'https://thmc.ddns.net/test/src/html/login.html'
+    } else {
+        console.log(localStorage.getItem('fname') + " " + localStorage.getItem('lname'));
+        var doc = document.getElementById('fullname');
+        doc.innerHTML = localStorage.getItem('fname') + " " + localStorage.getItem('lname');
+    }
+
 }
