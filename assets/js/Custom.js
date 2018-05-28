@@ -98,13 +98,13 @@ var ls2 = {
 
 function acessControl() {
     if (localStorage.getItem('rank') == undefined) {
-        location.href = 'https://thmc.ddns.net/test/src/html/login.html'
+        location.href = "login.html"
     }
 }
 
 function acessControlAdmin() {
     if (localStorage.getItem('rank') == '1' || localStorage.getItem('rank') == undefined) {
-        location.href = 'https://thmc.ddns.net/test/src/html/DashBoard.html'
+        location.href = "DashBoard.html"
     }
 
 }
@@ -113,6 +113,18 @@ function acessControlAdmin() {
 function checkSession() {
     if (ls2.load('session_code') == false) {
         location.href = 'https://thmc.ddns.net/test/src/expired.html'
+    }
+}
+
+function loginCheck() {
+    if (ls2.load('session_code') != false) {
+
+        if (localStorage.getItem('rank') == '0') {
+            location.href = "DashBoard-A.html";
+
+        } else {
+            location.href = "DashBoard.html";
+        }
     }
 }
 

@@ -90,24 +90,21 @@
                                 <!--card content-->
                                 <div class="card-content">
                                     <!--form-->
-                                    <form>
-                                        <div class="input-field center">
-                                            <img src="../../assets/images/user5.jpg" onerror="this.src='../../assets/images/default-avatar.png';" class="circle responsive-img valign profile-image-login">
-                                            <h4 id="fullname" class="avatar-header"></h4>
 
-                                        </div>
+                                    <div class="input-field center">
+                                        <img src="../../assets/images/user5.jpg" onerror="this.src='../../assets/images/default-avatar.png';" class="circle responsive-img valign profile-image-login">
+                                        <h4 id="fullname" class="avatar-header"></h4>
+                                    </div>
 
-                                        <div class="input-field">
-                                            <i class="material-icons prefix">lock</i>
-                                            <input id="password" type="password" class="validate" autocomplete="off" required>
-                                            <label for="password">Password</label>
-                                        </div>
-
-                                        
-                                    </form>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input id="password" type="password" class="validate" autocomplete="off" required>
+                                        <label for="password">Password</label>
+                                    </div>
                                     <div class="input-field">
                                         <button onclick="Dologin()" class="btn btn-block waves-effect waves-light theme-bg">Entrar</button>
                                     </div>
+
                                     <!--end form-->
                                 </div>
                                 <!--end card content-->
@@ -161,13 +158,20 @@
     <script src="../../assets/js/Custom.js"></script>
     <script src="../../assets/vendors/sweetalert2/sweetalert2.all.min.js" type="text/javascript"></script>
     <script>
-        
         LockUpdate();
 
         function Dologin() {
             Login(localStorage.getItem('email'), document.getElementById('password').value);
         }
-
+        
+        var submit_pass = document.getElementById("password");
+        submit_pass.addEventListener("keydown", function (e) {
+            if (e.keyCode === 13) { //checks whether the pressed key is "Enter"
+                Dologin();
+            } else {
+                console.log(e.keyCode);
+            }
+        });
     </script>
     <!--End scripts-->
     <!-- //////////////////////////////////////////////////////////////////////////// -->
