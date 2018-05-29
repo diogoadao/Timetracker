@@ -3,7 +3,7 @@
 <html lang="en">
 <!--Head-->
 <?php 
-require_once 'template/Head.html';
+    require_once 'template/Head.html';
 ?>
 
 <head>
@@ -17,8 +17,8 @@ require_once 'template/Head.html';
         <!--Control page-->
         <div id="control-body" class="fixed-sidebar medium-sidebar fixed-nav collapsed-sidebar">
             <?php 
-            require_once 'template/Preloader.html';
-            require_once 'template/Nav-A.html';
+                require_once 'template/Preloader.html';
+                require_once 'template/Nav-A.html';
             ?>
             <!--Page Body-->
             <main id="page-body" class="page-body">

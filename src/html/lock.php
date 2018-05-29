@@ -16,7 +16,7 @@
         <div id="control-body">
             <!--prepage loader-->
             <?php 
-            require_once 'template/Preloader.html';
+                require_once 'template/Preloader.html';
             ?>
             <!-- End prepage loader-->
             <!--form Page Body-->

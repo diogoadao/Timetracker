@@ -3,7 +3,7 @@
 <html lang="en">
 <!--Head-->
 <?php 
-require_once 'template/Head.html';
+    require_once 'template/Head.html';
 ?>
 
 <head>

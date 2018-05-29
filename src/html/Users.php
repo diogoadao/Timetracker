@@ -1,5 +1,5 @@
 <?php
-include '../../assets/php/db.php';
+    include '../../assets/php/db.php';
 ?>
     <!--Start HTML document-->
     <!--HTML-->
@@ -7,7 +7,7 @@ include '../../assets/php/db.php';
     <!--Head-->
     <?php 
     require_once 'template/Head.html';
-?>
+    ?>
 
     <head>
         <title>Dashboard - Visual Thinking</title>
@@ -22,7 +22,7 @@ include '../../assets/php/db.php';
                 <?php 
                 require_once 'template/Preloader.html';
                 require_once 'template/Nav-A.html';
-            ?>
+                ?>
                 <!--Page Body-->
                 <main class="page-body">
                     <!--page title box-->
@@ -43,8 +43,8 @@ include '../../assets/php/db.php';
                                                     <div class="card">
                                                         <!-- custom filter length Table -->
                                                         <?php
-                                    require_once 'template/Admin/UserTable.php';
-                                ?>
+                                                            require_once 'template/Admin/UserTable.php';
+                                                        ?>
                                                             <!-- End custom filter length Table -->
                                                     </div>
                                                 </div>
@@ -57,8 +57,8 @@ include '../../assets/php/db.php';
                                                     <div class="card">
                                                         <!-- custom filter length Table -->
                                                         <?php
-                                    require_once 'template/Admin/ClientTable.php';
-                                ?>
+                                                             require_once 'template/Admin/ClientTable.php';
+                                                        ?>
                                                             <!-- End custom filter length Table -->
                                                     </div>
                                                 </div>
