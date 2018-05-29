@@ -30,9 +30,9 @@ function Login(email, password) {
                     localStorage.setItem('email', data['email']);
                     localStorage.setItem('rank', data['rank']);
                     if (data['rank'] >= 1) {
-                        location.href = '../html/DashBoard.html';
+                        location.href = '../html/DashBoard.php';
                     } else {
-                        location.href = '../html/DashBoard-A.html';
+                        location.href = '../html/DashBoard-A.php';
                     }
 
                 }, 1502);
@@ -104,7 +104,7 @@ function acessControl() {
 
 function acessControlAdmin() {
     if (localStorage.getItem('rank') == '1' || localStorage.getItem('rank') == undefined) {
-        location.href = "DashBoard.html"
+        location.href = "DashBoard.php"
     }
 
 }
@@ -120,16 +120,16 @@ function loginCheck() {
     if (ls2.load('session_code') != false) {
 
         if (localStorage.getItem('rank') == '0') {
-            location.href = "DashBoard-A.html";
+            location.href = "DashBoard-A.php";
 
         } else {
-            location.href = "DashBoard.html";
+            location.href = "DashBoard.php";
         }
     }
 }
 
 function Lock() {
-    location.href = "lock.html";
+    location.href = "lock.php";
 }
 
 function LockUpdate() {
