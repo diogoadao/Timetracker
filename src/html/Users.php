@@ -37,7 +37,7 @@ include '../../assets/php/db.php';
                                     <div class="card-content bluer">
                                         <ul class="collapsible">
                                             <li class="active">
-                                                <div class="collapsible-header">
+                                                <div class="collapsible-header active">
                                                     <i class="material-icons">supervisor_account</i>Utilizadores</div>
                                                 <div class="collapsible-body">
                                                     <div class="card">
