@@ -35,7 +35,7 @@ include '../../assets/php/db.php';
                                 <!--start card-->
                                 <div class="card">
                                     <div class="card-content bluer">
-                                        <ul class="collapsible">
+                                        <ul class="collapsible rounder">
                                             <li class="active">
                                                 <div class="collapsible-header active">
                                                     <i class="material-icons">supervisor_account</i>Utilizadores</div>

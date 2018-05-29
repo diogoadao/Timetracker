@@ -3,4 +3,7 @@
 .bluer{
 background-color: #d2d2d2;
 }
+.rounder{
+    border-radius: "25px";
+}
 /* write your css from here */
