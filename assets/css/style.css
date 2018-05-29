@@ -3,7 +3,11 @@
 .bluer{
 background-color: #d2d2d2;
 }
-.rounder{
-    border-radius: "25px";
+
+.pad20{
+    padding-left : 20px;
+}
+.pad35{
+    padding-left : 30px;
 }
 /* write your css from here */

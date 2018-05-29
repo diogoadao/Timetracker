@@ -34,7 +34,7 @@
                         echo '<td>'.$row['fname'].' '.$row['lname'].'</td>';
                         echo '<td>'.$row['email'].'</td>';
                         echo '<td>'.$row['uuid'].'</td>';
-                        echo "<td><a class='far fa-edit fa-2x' href=ClientPage.php?codigo=" . $row['uuid'] . "></a></td>";
+                        echo "<td><a class='far fa-edit fa-2x pad20' href=ClientPage.php?codigo=" . $row['uuid'] . "></a></td>";
                         echo("</tr>");
                        }
                     ?>   
