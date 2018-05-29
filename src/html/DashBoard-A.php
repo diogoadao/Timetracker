@@ -1,5 +1,4 @@
 <!--Start HTML document-->
-<!DOCTYPE html>
 <!--HTML-->
 <html lang="en">
 <!--Head-->
@@ -22,12 +21,13 @@ require 'template/Head.html';
             require 'template/Nav-A.html';
             ?>
             <!--Page Body-->
-            <main id="page-body" class="page-body">
+            <main class="page-body">
             </main>
             <!--End page body-->
             <?php 
                 require 'template/Footer.html';
                 require 'template/Scripts-A.html';
+                
             ?>
         </div>
         <!--End page control-->

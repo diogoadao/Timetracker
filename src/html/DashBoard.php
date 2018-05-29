@@ -1,5 +1,4 @@
 <!--Start HTML document-->
-<!DOCTYPE html>
 <!--HTML-->
 <html lang="en">
 <!--Head-->

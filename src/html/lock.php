@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+
 <!--HTML-->
 <html lang="en">
 <!--Head-->
 <?php 
     require 'template/Head.html';
 ?>
-
 <head>
     <title>Locked - Visual Thinking</title>
 </head>

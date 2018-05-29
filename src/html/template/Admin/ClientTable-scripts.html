@@ -1,0 +1,22 @@
+<script>
+    /* Export Button data table*/
+    $('#custom-filter-length-datatable2').dataTable({
+        "oLanguage": {
+            "sLengthMenu": '<span>Rows per page:</span><select class="browser-default">' +
+                '<option value="10">10</option>' +
+                '<option value="25">25</option>' +
+                '<option value="56">56</option>' +
+                '<option value="100">100</option>' +
+                '<option value="300">300</option>' +
+                '<option value="-1">All</option>' +
+                '</select></div>'
+        }
+    });
+    // export data in csv
+    $(".export-in-csv").click(function () {
+        $("#custom-filter-length-datatable2").table2csv();
+    })
+    $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+</script>
