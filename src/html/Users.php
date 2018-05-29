@@ -6,7 +6,7 @@ include '../../assets/php/db.php';
     <html lang="en">
     <!--Head-->
     <?php 
-    require 'template/Head.html';
+    require_once 'template/Head.html';
 ?>
 
     <head>
@@ -20,8 +20,8 @@ include '../../assets/php/db.php';
             <!--Control page-->
             <div id="control-body" class="fixed-sidebar medium-sidebar fixed-nav collapsed-sidebar">
                 <?php 
-                require 'template/Preloader.html';
-                require 'template/Nav-A.html';
+                require_once 'template/Preloader.html';
+                require_once 'template/Nav-A.html';
             ?>
                 <!--Page Body-->
                 <main class="page-body">
@@ -43,7 +43,7 @@ include '../../assets/php/db.php';
                                                     <div class="card">
                                                         <!-- custom filter length Table -->
                                                         <?php
-                                    require 'template/Admin/UserTable.php';
+                                    require_once 'template/Admin/UserTable.php';
                                 ?>
                                                             <!-- End custom filter length Table -->
                                                     </div>
@@ -57,7 +57,7 @@ include '../../assets/php/db.php';
                                                     <div class="card">
                                                         <!-- custom filter length Table -->
                                                         <?php
-                                    require 'template/Admin/ClientTable.php';
+                                    require_once 'template/Admin/ClientTable.php';
                                 ?>
                                                             <!-- End custom filter length Table -->
                                                     </div>
@@ -79,10 +79,10 @@ include '../../assets/php/db.php';
                 </main>
                 <!--End page body-->
                 <?php 
-                require 'template/Footer.html';
-                require 'template/Scripts-A.html';
-                require 'template/Admin/UserTable-scripts.html';
-                require 'template/Admin/ClientTable-scripts.html';
+                require_once 'template/Footer.html';
+                require_once 'template/Scripts-A.html';
+                require_once 'template/Admin/UserTable-scripts.html';
+                require_once 'template/Admin/ClientTable-scripts.html';
             ?>
             </div>
             <!--End page control-->

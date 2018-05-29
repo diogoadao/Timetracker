@@ -3,7 +3,7 @@
 <html lang="en">
 <!--Head-->
 <?php 
-    require 'template/Head.html';
+    require_once 'template/Head.html';
 ?>
 <head>
     <title>Locked - Visual Thinking</title>
@@ -16,7 +16,7 @@
         <div id="control-body">
             <!--prepage loader-->
             <?php 
-            require 'template/Preloader.html';
+            require_once 'template/Preloader.html';
             ?>
             <!-- End prepage loader-->
             <!--form Page Body-->
