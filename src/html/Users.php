@@ -6,22 +6,20 @@
     <html lang="en">
     <!--Head-->
     <?php 
-    require_once 'template/Head.html';
+        require_once 'template/Head.html';
     ?>
-
     <head>
         <title>Dashboard - Visual Thinking</title>
     </head>
     <!--body-->
-
     <body onload="">
         <!--Page wrapper-->
         <div class="page-wrapper">
             <!--Control page-->
             <div id="control-body" class="fixed-sidebar medium-sidebar fixed-nav collapsed-sidebar">
                 <?php 
-                require_once 'template/Preloader.html';
-                require_once 'template/Nav-A.html';
+                    require_once 'template/Preloader.html';
+                    require_once 'template/Nav-A.html';
                 ?>
                 <!--Page Body-->
                 <main class="page-body">
@@ -33,13 +31,13 @@
                             <!--start column-->
                             <div class="col s12">
                                 <!--start card-->
-                                <div class="card">
-                                    <div class="card-content bluer">
+                                <div class="card z-depth 4">
+                                    <div class="card-content greyer">
                                         <ul class="collapsible rounder">
                                             <li class="active">
                                                 <div class="collapsible-header active">
                                                     <i class="material-icons">supervisor_account</i>Utilizadores</div>
-                                                <div class="collapsible-body">
+                                                <div class="collapsible-body greyerer">
                                                     <div class="card">
                                                         <!-- custom filter length Table -->
                                                         <?php
@@ -53,7 +51,7 @@
                                             <li>
                                                 <div class="collapsible-header">
                                                     <i class="material-icons">supervisor_account</i>Clientes</div>
-                                                <div class="collapsible-body">
+                                                <div class="collapsible-body greyerer">
                                                     <div class="card">
                                                         <!-- custom filter length Table -->
                                                         <?php
@@ -67,8 +65,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
-
                                 <!--end card-->
                             </div>
                             <!--end column-->
@@ -79,11 +75,11 @@
                 </main>
                 <!--End page body-->
                 <?php 
-                require_once 'template/Footer.html';
-                require_once 'template/Scripts-A.html';
-                require_once 'template/Admin/UserTable-scripts.html';
-                require_once 'template/Admin/ClientTable-scripts.html';
-            ?>
+                    require_once 'template/Footer.html';
+                    require_once 'template/Scripts-A.html';
+                    require_once 'template/Admin/UserTable-scripts.html';
+                    require_once 'template/Admin/ClientTable-scripts.html';
+                ?>
             </div>
             <!--End page control-->
         </div>
