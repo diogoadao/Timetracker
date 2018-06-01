@@ -1,11 +1,4 @@
 <?php 
-$address = $_SERVER['REMOTE_ADDR'];
-
-if(strpos($address, '192.168')!== false){
-echo'<iframe src="http://192.168.2.252:3000/public/dashboard/94b4e3c6-c2a9-480d-96c3-9eb527b4317b" frameborder="0" width="100%"
+echo'<iframe id="metabase" src="https://metabase-visualthinking.herokuapp.com/public/dashboard/fc89f093-5b64-4050-91b9-3350a2110a4f" frameborder="0" width="100%"
     height="67%" allowtransparency></iframe>';
-}else{
-    echo'<iframe src="http://thmc.ddns.net:3000/public/dashboard/94b4e3c6-c2a9-480d-96c3-9eb527b4317b" frameborder="0" width="100%"
-        height="67%" allowtransparency></iframe>';
-}
 ?>

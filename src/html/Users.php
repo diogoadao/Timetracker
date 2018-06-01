@@ -8,10 +8,12 @@
     <?php 
         require_once 'template/Head.html';
     ?>
+
     <head>
         <title>Dashboard - Visual Thinking</title>
     </head>
     <!--body-->
+
     <body onload="">
         <!--Page wrapper-->
         <div class="page-wrapper">
@@ -20,6 +22,7 @@
                 <?php 
                     require_once 'template/Preloader.html';
                     require_once 'template/Nav-A.html';
+                    require_once 'template/Modal.html';
                 ?>
                 <!--Page Body-->
                 <main class="page-body">
@@ -28,6 +31,15 @@
                     <section class="section">
                         <!--start row-->
                         <div class="row">
+                            <div class="card z-depth-3">
+                                <div class="card-content z-depth-3 greyer">
+                                    <span>|</span>
+                                    <button data-target="modal-creater" class="btn modal-trigger z-depth-3 indigo darken-2">Novo Registo</button>
+                                    <span>|</span>
+                                    <button onclick="Refresh();" class="btn z-depth-3 indigo darken-2">Atualizar Tabelas</button>
+                                    <span>|</span>
+                                </div>
+                            </div>
                             <!--start column-->
                             <div class="col s12">
                                 <!--start card-->

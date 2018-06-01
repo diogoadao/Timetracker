@@ -283,10 +283,13 @@ $(function() {
         placeholder: 'Enter a tag',
         secondaryPlaceholder: '+Tag',
     });
-
-
     /*initialize models*/
-    $('.modal').modal();
+    $('.modal').modal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        ready: function(modal, trigger) {
+        },
+      }
+    );
 
     /*initialize select*/
     $('select').material_select();

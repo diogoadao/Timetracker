@@ -19,12 +19,13 @@
                   <th>Full Name</th>
                   <th>Email</th>
                   <th>UUID</th>
+                  <th>Estado</th>
                   <th>Client Page</th>
                 </tr>
             </thead>
             <tbody>
                     <?php
-                        $results = mysqli_query($connection, "SELECT tt_id as id ,tt_first_name as fname , tt_last_name as lname ,tt_email as email , tt_uuid as uuid FROM tt_user where tt_client ='1' ORDER BY tt_id ");
+                        $results = mysqli_query($connection, "SELECT tt_state_text as state, tt_id as id ,tt_first_name as fname , tt_last_name as lname ,tt_email as email , tt_uuid as uuid FROM tt_user, tt_state where tt_client ='1' and  tt_state_id=tt_fk_status  ORDER BY tt_id");
                         $items = array();
                         $count = mysqli_num_rows($results);
                         
@@ -34,7 +35,8 @@
                         echo '<td>'.$row['fname'].' '.$row['lname'].'</td>';
                         echo '<td>'.$row['email'].'</td>';
                         echo '<td>'.$row['uuid'].'</td>';
-                        echo "<td><a class='far fa-edit fa-2x pad35' href=ClientPage.php?codigo=" . $row['uuid'] . "></a></td>";
+                        echo '<td>'.$row['state'].'</td>';
+                        echo '<td><button data-target="modal" class="btn modal-trigger indigo darken-2" value='.$row['id'].' onclick="localtemp(this);"><i class="far fa-edit fa-2x"></i></button></td>';
                         echo("</tr>");
                        }
                     ?>   
@@ -45,6 +47,7 @@
                   <th>Full Name</th>
                   <th>Email</th>
                   <th>UUID</th>
+                  <th>Estado</th>
                   <th>Client Page</th>
                 </tr>
             </tfoot>

@@ -28,7 +28,9 @@
                     <div class="row">
                         <!--start column-->
                         <div class="col s12">
+                            
                             <div class="card z-depth-3">
+
                                 <div class="card-content z-depth-3">
                                     <?php 
                                         require_once 'template/Admin/Metabase/Metabase.php';

@@ -146,3 +146,15 @@ function LockUpdate() {
     }
 
 }
+
+function localtemp(objButton){
+    var id = objButton.value;
+    localStorage.setItem('temp', id);
+}
+function refreshiframe(){
+    document.getElementById('metabase').src = document.getElementById('metabase').src
+}
+
+function Refresh(){
+    window.location.reload();
+}
